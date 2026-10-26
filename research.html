@@ -40,7 +40,7 @@
     <li><a href="#step-2"><strong>Step 2</strong><span>The write-up for this step is next.</span></a></li>
     <li><a href="#step-3"><strong>Step 3</strong><span>The write-up for this step is next.</span></a></li>
     <li><a href="#step-4"><strong>Step 4 · Pricing</strong><span>Who pays, what they pay for, and what you learn before a price is chosen.</span></a></li>
-    <li><a href="#step-5"><strong>Step 5 · Viability</strong><span>TAM, SAM, and SOM. The market has to get smaller before a build decision is real.</span></a></li>
+    <li><a href="#step-5"><strong>Step 5 · Viability</strong><span>TAM, SAM, and SOM, then the break-even cost: hosting, Claude Code, domain and SMS verification, and marketing.</span></a></li>
   </ol>
 
   <article class="qa" id="step-1">
@@ -116,7 +116,51 @@
       <span class="diagram-box">SOM · what we can win</span>
     </div>
     <p>Write four things beside every number: who is counted, the time window, the source, and the filter that removed everyone else. A TAM with no source is a slogan. A SOM with no time window is a wish.</p>
-    <div class="builder"><strong>For product managers.</strong> The build decision uses SOM, not TAM. Multiply that obtainable market by the price from step 4, and compare it with the cost to build and run the app. A huge total market can still hide a niche the team cannot reach.</div>
+    <div class="builder"><strong>For product managers.</strong> The build decision uses SOM, not TAM. A huge total market can still hide a niche the team cannot reach. The break-even count below is the number of paying customers that niche has to cover.</div>
+
+    <h3>Break-even cost calculation</h3>
+    <p>Break-even is the point where money from customers covers the cost of building and running the app. Pick one period, a month or the first year, and use that same period on every line.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Cost</th>
+            <th>What to include</th>
+            <th>How it usually behaves</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hosting and related services</td>
+            <td>Firebase Hosting, Firebase Functions, Firestore, Neon, Firebase Auth, and the other services the app needs to stay up.</td>
+            <td>A base plan is paid even with few users. Some usage grows as users grow.</td>
+          </tr>
+          <tr>
+            <td>Claude Code</td>
+            <td>The Claude Code plan used to build and maintain the app, plus usage beyond that plan.</td>
+            <td>The plan is a cost for the period. Extra usage grows with how much the team builds.</td>
+          </tr>
+          <tr>
+            <td>Domain and SMS verification</td>
+            <td>The domain name, and SMS verification when a user confirms a phone number.</td>
+            <td>The domain is usually fixed. SMS usually grows with each user who verifies.</td>
+          </tr>
+          <tr>
+            <td>Marketing</td>
+            <td>What it costs to reach the buyers counted in the SOM. Write down what is included.</td>
+            <td>A campaign can be fixed for the period. Some spend grows with each customer acquired.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Split each line into two piles. Costs you pay anyway for the period. Costs that grow with one more paying customer, such as a Stripe fee on the charge, an SMS verification, or hosting that scales per user.</p>
+    <pre class="mental-code"><code>Money kept from one customer
+  = price from step 4 − costs that grow with that customer
+
+Customers to break even
+  = costs you pay anyway ÷ money kept from one customer</code></pre>
+    <p>Compare that customer count with the SOM for the same period. If the SOM is smaller than the break-even count, the niche the team can win does not cover the cost. That is a reason to change the price, the scope, or the decision to build.</p>
+    <p>Write the quote or the source beside every amount. Leave a line blank until you have one. A blank is not zero.</p>
   </article>
 
   <nav class="lesson-nav" aria-label="Lesson">
