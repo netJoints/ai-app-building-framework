@@ -5,6 +5,7 @@ A course for the team, including product managers. The app built with this frame
 1. **[AI 101](ai-101.html)** — the ideas, before anyone builds.
 2. **[The tech stack](stack.html)** — the tools this teaching app is built with.
 3. **[Research before you build](research.html)** — research before building the app for users. Pricing and viability are written. Steps 1, 2, and 3 of that chapter are next.
+4. **[Prompt engineering](prompt-engineering.html)** — one prompt product managers use to build a product or research a feature idea.
 
 The course site is published at <https://netjoints.github.io/ai-app-building-framework/>.
 
@@ -60,6 +61,24 @@ Research before starting to build the app for users. Product managers and the re
 Break-even uses one period, such as a month or the first year. Add the costs you pay anyway: hosting and related services, Claude Code, the domain and SMS verification, and marketing. Divide that total by the money kept from one paying customer, after costs that grow with that customer. Compare the result with the SOM for the same period.
 
 The full lesson is [research.html](research.html).
+
+## Chapter 4 · Prompt engineering
+
+Product managers keep these sections, in this order, in the prompt:
+
+1. Objective
+2. Role Map
+3. Competitor Agent
+4. customer-pain agent
+5. Pricing agent
+6. Skeptic agent
+7. Evidence standard
+8. Stop rule
+9. Output
+
+The same prompt is used to build a product and to do market research on a feature idea. The Objective line is what changes. Claims are sourced, quoted, or labeled as assumptions. A blank number is not zero.
+
+The full lesson and the prompt are in [prompt-engineering.html](prompt-engineering.html).
 
 ## Selected sources for AI 101
 

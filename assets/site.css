@@ -228,7 +228,8 @@ code,
   font-size: .92em;
 }
 
-.mental-code {
+.mental-code,
+.prompt {
   margin: 12px 0 0;
   padding: 12px 14px;
   overflow-x: auto;
@@ -236,6 +237,14 @@ code,
   color: #234;
   background: #fff;
   font-size: .92rem;
+}
+
+.prompt {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  font-size: .88rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
 }
 
 .table-wrap { overflow-x: auto; }

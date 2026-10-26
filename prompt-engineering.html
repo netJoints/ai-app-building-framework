@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chapter 4. Prompt engineering for product managers: one prompt for building a product or researching a feature idea.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Chapter 4 · Prompt engineering — AI App Building Framework</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+  <nav class="course-nav" aria-label="Course">
+    <a href="index.html">Course</a>
+    <a href="ai-101.html">01 AI 101</a>
+    <a href="stack.html">02 Tech stack</a>
+    <a href="research.html">03 Research</a>
+    <a href="prompt-engineering.html" aria-current="page">04 Prompts</a>
+  </nav>
+  <header class="hero">
+    <p class="eyebrow">Chapter 4</p>
+    <h1>Prompt engineering</h1>
+    <p>Product managers use one prompt shape to build a product or to research the market for a feature idea. The sections below stay in this order. Change the feature and the user. Leave the rules in place.</p>
+  </header>
+
+  <section class="story">
+    <strong>What this prompt is for</strong>
+    <p>A single cheerful answer hides weak evidence. This prompt splits the work across agents, sets the evidence bar, and stops when the decision is clear or when a missing fact would change it. Use it before a build, and use it again when a feature idea needs market research.</p>
+    <div class="flow" aria-label="Sections of the prompt">
+      <span>Objective</span>
+      <span>Role Map</span>
+      <span>Competitor Agent</span>
+      <span>customer-pain agent</span>
+      <span>Pricing agent</span>
+      <span>Skeptic agent</span>
+      <span>Evidence standard</span>
+      <span>Stop rule</span>
+      <span>Output</span>
+    </div>
+  </section>
+
+  <h2>The sections</h2>
+
+  <article class="qa" id="objective">
+    <span class="number">1</span>
+    <h3>Objective</h3>
+    <p>One decision. Name the feature, the user, and which job this run is doing: building the product, or market research on the feature idea. Say what done looks like. A prompt with two objectives produces a blended answer that is hard to use.</p>
+  </article>
+
+  <article class="qa" id="role-map">
+    <span class="number">2</span>
+    <h3>Role Map</h3>
+    <p>Name each agent and the only question that agent answers. The map keeps the Competitor Agent, the customer-pain agent, the Pricing agent, and the Skeptic agent from doing each other’s work or smoothing over a disagreement.</p>
+  </article>
+
+  <article class="qa" id="competitor-agent">
+    <span class="number">3</span>
+    <h3>Competitor Agent</h3>
+    <p>Finds what a real customer could use instead, including the manual workaround. For each alternative, keep only what can be sourced: what it does, who it is for, a published price, and the gap. An unknown competitor stays unknown. The agent does not invent a company, a price, or a feature list.</p>
+  </article>
+
+  <article class="qa" id="customer-pain-agent">
+    <span class="number">4</span>
+    <h3>customer-pain agent</h3>
+    <p>States the pain in the customer’s words. Who feels it, in what moment, how often, what they do today, and what that costs. Each line is a quote, an observation, or an assumption. If no customer evidence exists yet, the section says so and lists the questions to ask.</p>
+  </article>
+
+  <article class="qa" id="pricing-agent">
+    <span class="number">5</span>
+    <h3>Pricing agent</h3>
+    <p>Uses the pricing questions from chapter 3. Who pays, what they pay for, when they pay, and what the workaround costs now. A price hypothesis appears only when evidence supports it, with the assumption written underneath. No pricing conversations means the number stays blank. A blank is not zero.</p>
+  </article>
+
+  <article class="qa" id="skeptic-agent">
+    <span class="number">6</span>
+    <h3>Skeptic agent</h3>
+    <p>Argues that the team should not build the feature. It uses weak evidence, a SOM that cannot cover the break-even count, a price nobody has tested, and any place another agent assumed the answer. It does not invent a fatal flaw. It names the strongest objection the evidence supports, and the fact that would change its mind.</p>
+  </article>
+
+  <article class="qa" id="evidence-standard">
+    <span class="number">7</span>
+    <h3>Evidence standard</h3>
+    <p>Every claim is sourced, quoted, or labeled as an assumption. TAM, SAM, SOM, price, and cost need a source or they stay blank. A fluent sentence is not a finding. Secrets, customer lists, and credentials do not go in the prompt.</p>
+  </article>
+
+  <article class="qa" id="stop-rule">
+    <span class="number">8</span>
+    <h3>Stop rule</h3>
+    <p>Stop when every section is present, every claim meets the evidence standard, the skeptic has stated the strongest reason not to build, and the output matches the shape below. If one missing fact would change the decision, stop and ask that one question. Do not keep writing to cover a gap.</p>
+  </article>
+
+  <article class="qa" id="output">
+    <span class="number">9</span>
+    <h3>Output</h3>
+    <p>The same shape on every run, so product managers can compare a build prompt with a research prompt. Decision, pains, competitors, price, viability, the skeptic’s objection, open questions, and assumptions.</p>
+  </article>
+
+  <h2>The prompt</h2>
+  <p>Replace the brackets. Keep the section names and the rules.</p>
+  <pre class="prompt"><code>Objective:
+Decide whether to build [feature] for [user].
+This run is for: [building the product | market research on the feature idea].
+Done looks like: a decision of build, research more, or do not build, with the evidence and the gaps written down.
+
+Role Map:
+- Competitor Agent owns alternatives, including the workaround the customer uses now.
+- customer-pain agent owns the pain and what the customer does today.
+- Pricing agent owns who pays and the price hypothesis.
+- Skeptic agent owns the strongest reason not to build.
+No agent fills another agent's section. No agent invents a source, a number, a competitor, or a quote.
+
+Competitor Agent:
+List alternatives a real customer could use instead of [feature], including manual work.
+For each one, record only what you can source: what it does, who it is for, the published price, and the gap.
+If you cannot source it, write "unknown" and the search you would run. Do not invent a company or a feature.
+
+customer-pain agent:
+State the pain in the customer's words.
+Who feels it, in what moment, how often, what they do today, and what that costs in time or money.
+Mark each line as a quote, an observation, or an assumption.
+If there is no customer evidence yet, say so and list the questions to ask.
+
+Pricing agent:
+Answer who pays, what they pay for, and when they pay: once, on a subscription, or by usage.
+Compare that with what the customer pays now for the workaround.
+Give a price hypothesis only when the evidence supports it, and write the assumption under the number.
+If there are no pricing conversations, leave the number blank. A blank is not zero.
+Use the same period as the break-even calculation.
+
+Skeptic agent:
+Argue that the team should not build [feature].
+Use weak evidence, a SOM that cannot cover break-even, a price with no buyer conversation, and any place another agent assumed the answer.
+Do not invent a fatal flaw. Name the strongest objection the evidence supports, and the fact that would change your mind.
+
+Evidence standard:
+A claim is sourced, quoted, or labeled as an assumption.
+TAM, SAM, SOM, price, and cost need a source or they stay blank.
+A blank is not zero.
+Do not present a fluent guess as a finding.
+Do not paste secrets, customer lists, or credentials into the prompt.
+
+Stop rule:
+Stop when every section is present, every claim meets the evidence standard, the skeptic has stated the strongest reason not to build, and the output matches the shape below.
+If one missing fact would change the decision, stop and ask that one question.
+Do not keep writing to hide a gap.
+
+Output:
+- Decision: build, research more, or do not build
+- Feature and user
+- Customer pains, each marked quote, observation, or assumption
+- Competitors, each with a source or "unknown"
+- Price hypothesis, or blank
+- Viability: TAM, SAM, SOM, and break-even customer count, only where a source exists
+- Skeptic: strongest objection, and the fact that would change it
+- Open questions
+- Assumptions</code></pre>
+
+  <nav class="lesson-nav" aria-label="Lesson">
+    <a href="research.html"><span>Previous</span>Chapter 3 · Research</a>
+    <a class="next" href="index.html"><span>Course</span>Back to the start</a>
+  </nav>
+
+  <footer>
+    <p>The same nine sections are used to build a product and to research a feature idea. The Objective line is what changes.</p>
+  </footer>
+</main>
+</body>
+</html>
