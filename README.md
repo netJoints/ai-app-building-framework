@@ -49,13 +49,15 @@ Research before starting to build the app for users. Product managers and the re
 2. Step 2 — next
 3. Step 3 — next
 4. **Pricing** — who pays, what they pay for, and what to learn before a price is chosen.
-5. **Viability** — TAM, SAM, and SOM.
+5. **Viability** — TAM, SAM, and SOM, then the break-even cost calculation.
 
 | Term | Name | What it counts |
 | --- | --- | --- |
 | TAM | Total Addressable Market | Everyone who could buy this kind of product. |
 | SAM | Serviceable Addressable Market | The part of the TAM that matches this product’s specific niche. |
 | SOM | Serviceable Obtainable Market | The part of the SAM the team can realistically reach and win. |
+
+Break-even uses one period, such as a month or the first year. Add the costs you pay anyway: hosting and related services, Claude Code, the domain and SMS verification, and marketing. Divide that total by the money kept from one paying customer, after costs that grow with that customer. Compare the result with the SOM for the same period.
 
 The full lesson is [research.html](research.html).
 
