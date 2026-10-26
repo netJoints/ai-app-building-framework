@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chapter 3. Research before building the app for users: pricing, and viability with TAM, SAM, and SOM. For the team and for product managers.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Chapter 3 · Research before you build — AI App Building Framework</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+  <nav class="course-nav" aria-label="Course">
+    <a href="index.html">Course</a>
+    <a href="ai-101.html">01 AI 101</a>
+    <a href="stack.html">02 Tech stack</a>
+    <a href="research.html" aria-current="page">03 Research</a>
+  </nav>
+  <header class="hero">
+    <p class="eyebrow">Chapter 3</p>
+    <h1>Research before you build</h1>
+    <p>Do this research before starting to build the app for users. Product managers use it to frame the buyer, the price, and the market. The rest of the team uses the same words.</p>
+  </header>
+
+  <section class="story">
+    <strong>Five steps in this chapter</strong>
+    <p>Steps 1, 2, and 3 are next. Steps 4 and 5 are ready: pricing, then viability.</p>
+    <div class="flow" aria-label="Five research steps">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4 Pricing</span>
+      <span>5 Viability</span>
+    </div>
+  </section>
+
+  <h2>The steps</h2>
+  <ol class="path">
+    <li><a href="#step-1"><strong>Step 1</strong><span>The write-up for this step is next.</span></a></li>
+    <li><a href="#step-2"><strong>Step 2</strong><span>The write-up for this step is next.</span></a></li>
+    <li><a href="#step-3"><strong>Step 3</strong><span>The write-up for this step is next.</span></a></li>
+    <li><a href="#step-4"><strong>Step 4 · Pricing</strong><span>Who pays, what they pay for, and what you learn before a price is chosen.</span></a></li>
+    <li><a href="#step-5"><strong>Step 5 · Viability</strong><span>TAM, SAM, and SOM. The market has to get smaller before a build decision is real.</span></a></li>
+  </ol>
+
+  <article class="qa" id="step-1">
+    <span class="number">1</span>
+    <h3>Step 1</h3>
+    <p>The write-up for this step is next.</p>
+  </article>
+
+  <article class="qa" id="step-2">
+    <span class="number">2</span>
+    <h3>Step 2</h3>
+    <p>The write-up for this step is next.</p>
+  </article>
+
+  <article class="qa" id="step-3">
+    <span class="number">3</span>
+    <h3>Step 3</h3>
+    <p>The write-up for this step is next.</p>
+  </article>
+
+  <article class="qa" id="step-4">
+    <span class="number">4</span>
+    <h3>Pricing</h3>
+    <p>A price is a research result. It is the amount a specific buyer will pay for a specific outcome, compared with what they do today. Pick the number after the conversations, and write the assumption next to it.</p>
+    <p>Answer four questions before anyone builds the payment flow.</p>
+    <ul>
+      <li><strong>Who pays.</strong> The person using the app, a manager buying for a group, or someone else.</li>
+      <li><strong>What they pay for.</strong> A seat, a workspace, a result, or usage.</li>
+      <li><strong>When they pay.</strong> Once, on a subscription, or by use.</li>
+      <li><strong>What they do instead.</strong> The current workaround, and what it costs in money and time. That comparison is what the buyer is actually making.</li>
+    </ul>
+    <p>On this stack, Stripe holds charges, subscriptions, and payment state. Firebase Functions creates the charge. Card details and provider keys stay with Stripe and in GitHub Actions secrets. They do not go in the repository or in the mobile app.</p>
+    <div class="builder"><strong>For product managers.</strong> Talk to people in the niche before the build. Ask what they pay now, what they tried, and what would make them switch. Record the answers. A price that has never been said out loud to a buyer is still a guess.</div>
+  </article>
+
+  <article class="qa" id="step-5">
+    <span class="number">5</span>
+    <h3>Viability</h3>
+    <p>Viability asks whether the market you can actually win is large enough to justify building. Three nested markets keep the claim honest. Each one is smaller than the one before it.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Name</th>
+            <th>What it counts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TAM</td>
+            <td>Total Addressable Market</td>
+            <td>Everyone who could buy this kind of product, with no niche filter.</td>
+          </tr>
+          <tr>
+            <td>SAM</td>
+            <td>Serviceable Addressable Market</td>
+            <td>The part of the TAM that matches this product’s specific niche: the buyers this product can actually serve.</td>
+          </tr>
+          <tr>
+            <td>SOM</td>
+            <td>Serviceable Obtainable Market</td>
+            <td>The part of the SAM the team can realistically reach and win. Serviceable, and obtainable.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mini-diagram" aria-label="TAM narrows to SAM, then to SOM">
+      <span class="diagram-box">TAM · total market</span>
+      <span class="diagram-arrow">→</span>
+      <span class="diagram-box">SAM · our niche</span>
+      <span class="diagram-arrow">→</span>
+      <span class="diagram-box">SOM · what we can win</span>
+    </div>
+    <p>Write four things beside every number: who is counted, the time window, the source, and the filter that removed everyone else. A TAM with no source is a slogan. A SOM with no time window is a wish.</p>
+    <div class="builder"><strong>For product managers.</strong> The build decision uses SOM, not TAM. Multiply that obtainable market by the price from step 4, and compare it with the cost to build and run the app. A huge total market can still hide a niche the team cannot reach.</div>
+  </article>
+
+  <nav class="lesson-nav" aria-label="Lesson">
+    <a href="stack.html"><span>Previous</span>Chapter 2 · The tech stack</a>
+    <a class="next" href="index.html"><span>Course</span>Back to the start</a>
+  </nav>
+
+  <footer>
+    <p>Steps 1, 2, and 3 of this chapter are next. Pricing and viability are the steps to use now.</p>
+  </footer>
+</main>
+</body>
+</html>
