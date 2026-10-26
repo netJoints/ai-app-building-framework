@@ -1,13 +1,14 @@
 # AI App Building Framework
 
-A two-step course for the team. The app built with this framework is how the team learns.
+A course for the team, including product managers. The app built with this framework is how the team learns.
 
 1. **[AI 101](ai-101.html)** — the ideas, before anyone builds.
 2. **[The tech stack](stack.html)** — the tools this teaching app is built with.
+3. **[Research before you build](research.html)** — research before building the app for users. Pricing and viability are written. Steps 1, 2, and 3 of that chapter are next.
 
 The course site is published at <https://netjoints.github.io/ai-app-building-framework/>.
 
-## Step 1 · AI 101
+## Chapter 1 · AI 101
 
 The team needs a shared picture of how the field got here:
 
@@ -23,7 +24,7 @@ Agent = uses the model in a tool-using loop
 
 The full lesson is [ai-101.html](ai-101.html).
 
-## Step 2 · The tech stack
+## Chapter 2 · The tech stack
 
 One web app. Firebase Hosting serves it. Capacitor packages that same app for Android and iOS. Firebase Functions runs the backend, including model calls.
 
@@ -39,6 +40,24 @@ One web app. Firebase Hosting serves it. Capacitor packages that same app for An
 | Capacitor | Mobile | Package the same web app for Android and iOS. |
 
 The full lesson is [stack.html](stack.html).
+
+## Chapter 3 · Research before you build
+
+Research before starting to build the app for users. Product managers and the rest of the team share this chapter.
+
+1. Step 1 — next
+2. Step 2 — next
+3. Step 3 — next
+4. **Pricing** — who pays, what they pay for, and what to learn before a price is chosen.
+5. **Viability** — TAM, SAM, and SOM.
+
+| Term | Name | What it counts |
+| --- | --- | --- |
+| TAM | Total Addressable Market | Everyone who could buy this kind of product. |
+| SAM | Serviceable Addressable Market | The part of the TAM that matches this product’s specific niche. |
+| SOM | Serviceable Obtainable Market | The part of the SAM the team can realistically reach and win. |
+
+The full lesson is [research.html](research.html).
 
 ## Selected sources for AI 101
 
