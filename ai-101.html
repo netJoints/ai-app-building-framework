@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Step 1. AI 101 for leaders on the team, before the teaching app is built.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Step 1 · AI 101 — AI App Building Framework</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main>
+  <nav class="course-nav" aria-label="Course">
+    <a href="index.html">Course</a>
+    <a href="ai-101.html" aria-current="page">01 AI 101</a>
+    <a href="stack.html">02 Tech stack</a>
+  </nav>
+  <header class="hero">
+    <p class="eyebrow">Step 1 of 2</p>
+    <h1>AI 101</h1>
+    <p>Shared language for the team. These ideas come before the tech stack, and before anyone builds the teaching app.</p>
+  </header>
+
+  <section class="story" aria-label="The one-minute story">
+    <strong>The one-minute story</strong>
+    <p>AI is not new. The recent wave happened because several ideas finally worked well together: neural networks learned from large amounts of data, GPUs made the math fast enough, Transformers handled context efficiently, large language models became capable, and chat interfaces made them easy to use.</p>
+    <p>Each new system solved a practical limitation in the one before it.</p>
+    <div class="flow" aria-label="AI technology progression">
+      <span>rules</span>
+      <span>neural networks</span>
+      <span>Transformers</span>
+      <span>LLMs</span>
+      <span>GenAI / chat</span>
+      <span>RAG</span>
+      <span>agentic AI</span>
+    </div>
+  </section>
+
+  <h2>The ideas, in the order they became necessary</h2>
+
+  <article class="qa">
+    <span class="number">1</span>
+    <h3>Is AI new?</h3>
+    <p><strong>No.</strong> AI is a broad field that has existed since the 1950s. Earlier systems used rules, search, statistics, and expert knowledge. They could be useful, but they were often brittle: they struggled with messy language, new situations, and the amount of hand-written logic required.</p>
+    <div class="mini-diagram" aria-label="Rules can be useful but brittle">
+      <span class="diagram-box">Rules</span><span class="diagram-arrow">→</span><span class="diagram-box">Useful but brittle</span><span class="diagram-arrow">→</span><span class="diagram-box">Learn from data</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">2</span>
+    <h3>What problem were researchers trying to solve with language?</h3>
+    <p>People wanted computers to understand and produce natural language instead of requiring exact commands. Language is hard because meaning depends on surrounding words, word order, tone, and real-world context.</p>
+    <div class="mini-diagram" aria-label="Natural language requires context">
+      <span class="diagram-box">Human language</span><span class="diagram-arrow">→</span><span class="diagram-box">Ambiguity + context</span><span class="diagram-arrow">→</span><span class="diagram-box">Language models</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">3</span>
+    <h3>What is a neural network?</h3>
+    <p>A neural network is a set of connected mathematical layers. During training, it adjusts many numbers called <strong>weights</strong> so it gets better at recognizing patterns. A deep-learning model is a neural network with many layers. It does not think like a person. It learns useful mathematical patterns from examples.</p>
+    <div class="mini-diagram" aria-label="Neural networks learn patterns">
+      <span class="diagram-box">Examples</span><span class="diagram-arrow">→</span><span class="diagram-box">Layers + weights</span><span class="diagram-arrow">→</span><span class="diagram-box">Learned patterns</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">4</span>
+    <h3>What is a GPU, and why does it matter?</h3>
+    <p>A GPU, or graphics processing unit, was built to draw images. It is also very good at doing many similar calculations in parallel. Neural networks use huge matrix calculations, so GPUs and other accelerators make training and inference much faster. A GPU is a speed enabler. It is not the model.</p>
+    <div class="mini-diagram" aria-label="GPUs speed up neural network math">
+      <span class="diagram-box">Matrix math</span><span class="diagram-arrow">→</span><span class="diagram-box">GPU: parallel work</span><span class="diagram-arrow">→</span><span class="diagram-box">Faster training and inference</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">5</span>
+    <h3>What changed with “Attention Is All You Need”?</h3>
+    <p>In 2017, that paper introduced the <strong>Transformer</strong> architecture. Its key idea, <strong>attention</strong>, lets a model weigh which parts of the input are most relevant to one another. A useful memory aid is “context is what you need.” The paper did not use that phrase. Its title is “Attention Is All You Need.”</p>
+    <p>The Transformer handled context well and could be trained more efficiently in parallel than many earlier recurrent approaches.</p>
+    <div class="mini-diagram" aria-label="Attention finds relevant context">
+      <span class="diagram-box">Tokens</span><span class="diagram-arrow">→</span><span class="diagram-box">Attention</span><span class="diagram-arrow">→</span><span class="diagram-box">Relevant context</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">6</span>
+    <h3>What is a Transformer?</h3>
+    <p>A Transformer is a neural-network architecture built around attention. It reads tokens and learns relationships between them. Transformers are the foundation for many language models. A Transformer by itself is not a chatbot or an agent.</p>
+    <div class="mini-diagram" aria-label="Transformer processing">
+      <span class="diagram-box">Tokens</span><span class="diagram-arrow">→</span><span class="diagram-box">Transformer layers</span><span class="diagram-arrow">→</span><span class="diagram-box">Relationships + output</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">7</span>
+    <h3>What is pretraining?</h3>
+    <p>Pretraining is the first large learning stage. A language model sees a huge amount of text and repeatedly practices predicting the next token. It learns grammar, style, facts, and relationships stored as patterns in its weights. This creates a general-purpose base model.</p>
+    <div class="mini-diagram" aria-label="Pretraining creates a base model">
+      <span class="diagram-box">Large text dataset</span><span class="diagram-arrow">→</span><span class="diagram-box">Predict next token</span><span class="diagram-arrow">→</span><span class="diagram-box">Base model</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">8</span>
+    <h3>What is an LLM, and what does GPT mean?</h3>
+    <p>An <strong>LLM</strong> is a large language model: a language model with a very large number of learned weights, trained on a large amount of text. The first GPT paper appeared in 2018. Later scaling, including GPT-3 in 2020, improved the model’s ability to follow patterns and perform many language tasks.</p>
+    <p><strong>GPT</strong> stands for <strong>Generative Pre-trained Transformer</strong>:</p>
+    <ul>
+      <li><strong>Generative:</strong> it generates an output, usually one token at a time.</li>
+      <li><strong>Pre-trained:</strong> it first learns general language patterns from large datasets.</li>
+      <li><strong>Transformer:</strong> it uses the Transformer architecture.</li>
+    </ul>
+    <p>GPT is one family of LLMs. Not every LLM is a GPT model.</p>
+    <div class="mini-diagram" aria-label="GPT generates tokens">
+      <span class="diagram-box">Prompt</span><span class="diagram-arrow">→</span><span class="diagram-box">Tokens</span><span class="diagram-arrow">→</span><span class="diagram-box">GPT</span><span class="diagram-arrow">→</span><span class="diagram-box">Generated tokens</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">9</span>
+    <h3>What is a token?</h3>
+    <p>A token is a small piece of text that a model reads or produces. It can be a whole word, part of a word, punctuation, or a space-plus-word pattern, depending on the tokenizer. The model converts tokens into numbers, processes them, and predicts the next token.</p>
+    <p>Tokens are not exactly words. Token counts affect context limits, speed, and cost. A simple mental model is: text in, tokens, numbers, model, tokens out, text.</p>
+    <div class="mini-diagram" aria-label="Text becomes token IDs">
+      <span class="diagram-box">Text</span><span class="diagram-arrow">→</span><span class="diagram-box">Tokenizer</span><span class="diagram-arrow">→</span><span class="diagram-box">Token IDs</span><span class="diagram-arrow">→</span><span class="diagram-box">Model input</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">10</span>
+    <h3>What is inference?</h3>
+    <p><strong>Inference</strong> is using a trained model. When someone sends a prompt, the model processes the input and generates an answer. <strong>Training</strong> changes the model’s weights. <strong>Inference</strong> uses those weights to produce an output. A chat answer is inference, not a fresh training run on every question.</p>
+    <div class="builder"><strong>For the team.</strong> The teaching app will call a model. That call is inference. It does not retrain the model for each person on the team.</div>
+    <div class="mini-diagram" aria-label="Inference uses trained weights and a prompt">
+      <span class="diagram-box">Trained weights</span><span class="diagram-arrow">+</span><span class="diagram-box">Prompt</span><span class="diagram-arrow">→</span><span class="diagram-box">Inference</span><span class="diagram-arrow">→</span><span class="diagram-box">Answer</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">11</span>
+    <h3>What is GenAI?</h3>
+    <p><strong>Generative AI</strong>, or GenAI, creates new output from a prompt or other input. An LLM generates text or code. Other generative systems generate images, audio, video, or structured data.</p>
+    <div class="mini-diagram" aria-label="Generative AI creates many kinds of output">
+      <span class="diagram-box">Prompt</span><span class="diagram-arrow">→</span><span class="diagram-box">Generative model</span><span class="diagram-arrow">→</span><span class="diagram-box">Text, code, image, or audio</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">12</span>
+    <h3>Why did chat interfaces matter?</h3>
+    <p>In 2022, ChatGPT made large language models easy for everyday people to use through conversation. It was not the first natural-language AI tool, and it was not the first way to use a GPT-style model. It made instruction-following, multi-turn conversation, and useful generation feel accessible in one product.</p>
+    <div class="mini-diagram" aria-label="A chat interface makes an LLM conversational">
+      <span class="diagram-box">Person</span><span class="diagram-arrow">→</span><span class="diagram-box">Chat interface</span><span class="diagram-arrow">→</span><span class="diagram-box">Instruction-tuned model</span><span class="diagram-arrow">→</span><span class="diagram-box">Response</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">13</span>
+    <h3>Why was RAG needed?</h3>
+    <p>An LLM alone has two important limitations. Its training data has a cutoff, so it may not know recent information. It also does not automatically know private documents, policies, or current operational data.</p>
+    <p>The term <strong>RAG</strong>, retrieval-augmented generation, was formalized in a 2020 paper. RAG retrieves relevant information at question time and places it in the model’s context. The model then writes an answer using that context. RAG normally does not retrain the model.</p>
+    <p><code>question → search sources → select passages → prompt the model → grounded answer</code></p>
+    <div class="builder"><strong>For the team.</strong> If the teaching app must use the team’s own material, that is a retrieval decision. Updating the documents updates what the app can use, without training a new model.</div>
+    <div class="mini-diagram" aria-label="RAG retrieves context before generation">
+      <span class="diagram-box">Question</span><span class="diagram-arrow">→</span><span class="diagram-box">Retrieve sources</span><span class="diagram-arrow">→</span><span class="diagram-box">Context</span><span class="diagram-arrow">→</span><span class="diagram-box">Model answer</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">14</span>
+    <h3>What are embeddings and a vector database?</h3>
+    <p>An <strong>embedding</strong> is a list of numbers that represents the meaning or features of text. Texts with similar meaning tend to sit close together mathematically.</p>
+    <p>A <strong>vector database</strong> stores embeddings and searches for nearby vectors. In a RAG system, documents are split into passages, converted into embeddings, and indexed. A question is embedded too. The search finds relevant passages even when the wording differs.</p>
+    <p>The vector database is the search memory. The LLM is the language generator. Access control, redaction, and source quality still matter.</p>
+    <div class="mini-diagram" aria-label="Vector search finds relevant passages">
+      <span class="diagram-box">Documents + question</span><span class="diagram-arrow">→</span><span class="diagram-box">Embeddings</span><span class="diagram-arrow">→</span><span class="diagram-box">Vector search</span><span class="diagram-arrow">→</span><span class="diagram-box">Relevant passages</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">15</span>
+    <h3>What is agentic AI?</h3>
+    <p>A normal model call answers one prompt. An <strong>agentic</strong> system can take a goal, break it into steps, use tools, inspect results, remember relevant state, and continue until it reaches a stopping point.</p>
+    <p>An agent might search a knowledge base, call an API, check the result, and draft a response. Reliable systems need permissions, tool boundaries, logging, evaluation, and human approval for risky actions.</p>
+    <div class="builder"><strong>For the team.</strong> An agent is a bounded loop with tools. Approval for risky actions is a leadership decision, not a detail to add later.</div>
+    <div class="mini-diagram" aria-label="Agentic AI uses a plan and tool loop">
+      <span class="diagram-box">Goal</span><span class="diagram-arrow">→</span><span class="diagram-box">Plan</span><span class="diagram-arrow">→</span><span class="diagram-box">Use tools</span><span class="diagram-arrow">→</span><span class="diagram-box">Observe</span><span class="diagram-arrow">↺</span>
+    </div>
+  </article>
+
+  <article class="qa">
+    <span class="number">16</span>
+    <h3>What is easy to miss?</h3>
+    <ul>
+      <li><strong>Instruction tuning and alignment.</strong> After pretraining, models are further trained or configured to follow instructions and respect safety rules. That is a major reason a base model can become a usable assistant.</li>
+      <li><strong>Grounding and evaluation.</strong> A fluent answer is not automatically a correct answer. Good systems test accuracy, cite sources where possible, protect private data, and define what the model must do when it is uncertain.</li>
+      <li><strong>Multimodal AI.</strong> Modern systems also combine text with images, audio, video, code, and tools.</li>
+    </ul>
+    <div class="mini-diagram" aria-label="Evaluation makes model output more trustworthy">
+      <span class="diagram-box">Model output</span><span class="diagram-arrow">→</span><span class="diagram-box">Grounding + evaluation</span><span class="diagram-arrow">→</span><span class="diagram-box">Trusted action</span>
+    </div>
+  </article>
+
+  <section class="story">
+    <h2>One picture to keep</h2>
+    <pre class="mental-code"><code>LLM    = generates language
+RAG    = supplies better context
+Agent  = uses the model in a tool-using loop</code></pre>
+    <p>An LLM predicts likely next tokens from the context it receives. RAG supplies better, more current context. An agent adds a loop so the model can use tools and complete multi-step work. All three still need good data, security, testing, and human judgment.</p>
+  </section>
+
+  <nav class="lesson-nav" aria-label="Lesson">
+    <a href="index.html"><span>Course</span>Back to the start</a>
+    <a class="next" href="stack.html"><span>Next</span>Step 2 · The tech stack</a>
+  </nav>
+
+  <footer class="sources">
+    <p><strong>Selected sources:</strong> <a href="https://arxiv.org/abs/1706.03762" rel="noopener noreferrer">Attention Is All You Need</a> · <a href="https://arxiv.org/abs/2005.11401" rel="noopener noreferrer">RAG paper</a> · <a href="https://arxiv.org/abs/2005.14165" rel="noopener noreferrer">GPT-3 paper</a> · <a href="https://openai.com/index/chatgpt/" rel="noopener noreferrer">Introducing ChatGPT</a></p>
+  </footer>
+</main>
+</body>
+</html>
